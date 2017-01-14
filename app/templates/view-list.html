@@ -1,0 +1,23 @@
+<div class="feeds-wrap">
+
+    <div ui-view="feed-controls"></div>
+    
+    <div id="feeds" class="grid">
+       <div class="feed-item favorite" ng-repeat="item in news">
+            <div class="col-sm-10 col-lg-11">  
+                <p class="title">                    
+                    <a ui-sref="singleView({cat:category, entry:$index })">{{ item.title }}</a>
+                </p>
+                {{item.contentSnippet}}
+            </div>
+            <div class="col-sm-2 col-lg-1">
+                <div class="share-box">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-trash"></span>
+                    <span class="glyphicon glyphicon-share"></span>
+                </div>
+            </div>
+        </div><!--feed-item-->
+    </div><!--feed-->
+</div><!--feeds-wrap-->        
+                

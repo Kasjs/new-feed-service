@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Registration</title>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet"/> 
+    <link rel="stylesheet" href="fonts/FontAwesome/css/font-awesome.min.css"/>
+    <!-- libs  styles -->
+    <link rel="stylesheet" href="css/libs.min.css"/>
+    <!-- custom styles -->
+    <link rel="stylesheet" href="css/main.css"/>
+    
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <div class="logo-wrap">
+                        <a class="navbar-brand rss" style="cursor: pointer"><span class="orange">RSS</span><span class="line">|</span>READER</a>
+                    </div>
+                </div><!-- .navbar-header -->
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-6 col-lg-offset-3">
+                <div class="sign">
+                    <h1 class="text-center">Registration</h1>
+                    <div class="col-sm-12">
+                        <form action="#" class="form-horizontal">
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="text" class="form-control form-input" placeholder="Enter your email"/>
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input type="password" class="form-control form-input" placeholder="Enter your password"/>
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input type="password" class="form-control form-input" placeholder="Repeat your password"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="check-remember" class="control-label">
+                                    <input id="check-remember" type="checkbox"> I Agree with <a href="#" data-toggle="modal" data-target="#myModal">terms & conditions</a>
+                                </label>
+                            </div>
+                            <div class="form-group text-center">
+                                <button class="btn btn-primary" type="submit">Sign Up</button>
+                            </div>
+                        </form>
+                        <p class="text-center">
+                            Already have an account? <a href="login.html">Sign In</a>
+                        </p>
+                    </div>
+                </div><!-- .sign -->
+            </div>
+        </div><!-- .row -->
+    </div><!-- .container-fluid -->
+    <footer>
+        &copy; 2016
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3 class="modal-title" id="myModalLabel">Terms &Conditions</h3>
+            </div>
+            <div class="modal-body">
+                <h4>Terms and Conditions of Use.</h4>
+                <p class="text-lowercase">Welcome to our Rss Reader application!<span class="text-capitalize"> Our </span> team provide their services to you subject to the following conditions. <span class="text-capitalize">If</span> you visit or use this website, you accept these  conditions. <span class="text-capitalize">Please</span> read them carefully.</p>
+                <h4>Privacy</h4>
+                <p class="text-lowercase">Please review our Privacy</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+      </div>
+    </div>
+
+<script src="js/libs.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

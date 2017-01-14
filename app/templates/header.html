@@ -1,0 +1,71 @@
+<!--header-->
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle sidebar-btn" data-toggle="offcanvas" data-target="#sidebar" data-canvas="body">
+                        <span class="glyphicon glyphicon-align-left"></span>
+                    </button>
+                    <div class="logo-wrap">
+                        <a href='/' class="navbar-brand rss" style="cursor: pointer"><span class="orange">RSS</span><span class="line">|</span>READER</a>
+                    </div>
+                    <button type="button" class="navbar-toggle profile-detail-btn" data-toggle="collapse" data-target=".profile-detail">
+                        <span class="glyphicon glyphicon-align-justify"></span>
+                    </button>
+                </div><!-- .navbar-header -->
+    
+                <div class="hidden-xs">
+                    <div class="nav navbar-nav navbar-right">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="img/photo.jpg" class="user-image" alt="User Image">
+                                <span>pacikav@gmail.com</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="user-photo">
+                                    <img src="img/photo.jpg" class="img-circle" alt="User Image">
+                                </li>
+                                <li class="user-btns">
+                                    <div class="pull-left">
+                                        <a href="profile.html" class="btn btn-primary">Profile</a>
+                                    </div>
+                                    <div class="pull-right">
+                                        <button class="btn btn-primary" id="sign_out">Sign out</button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- desktop menu -->
+                
+                <div class="row visible-xs">
+                    <div class="profile-detail navbar-collapse collapse">
+                        <ul>
+                            <li class="user-photo">
+                                <img src="img/photo.jpg" alt="User Image">
+                            </li>
+                            <li class="user-email">
+                                <span>pacikav@gmail.com</span>
+                            </li>
+                            <li class="user-btns">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="text-center">
+                                            <a href="profile.html" class="btn btn-primary">Profile</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="text-center">
+                                            <button class="btn btn-primary">Sign out</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!-- mobile-menu -->
+                
+                <div id="sidebar" class="navmenu navmenu-fixed-left offcanvas-xs" role="navigation" ng-controller="SidebarCtrl" ng-include=" 'templates/sidebar.html' "></div>
+            </div>
+        </nav>
+        
+    <!--/header-->

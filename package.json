@@ -1,0 +1,30 @@
+{
+  "name": "rss-app",
+  "version": "1.0.0",
+  "description": "My self-learning app on AngularJs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Alex Patsyk",
+  "license": "ISC",
+  "devDependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.7.1",
+    "del": "^2.2.2",
+    "express": "^4.14.0",
+    "express-flash": "0.0.2",
+    "express-session": "^1.14.0",
+    "feedparser": "^2.0.0",
+    "fs": "0.0.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglifyjs": "^0.6.2",
+    "request": "^2.69.0"
+  }
+}

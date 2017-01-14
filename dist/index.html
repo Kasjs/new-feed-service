@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html ng-app="rssReaderApp">
+<head>
+    <title>Feeds</title>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet"/> 
+    <link rel="stylesheet" href="fonts/FontAwesome/css/font-awesome.min.css"/>
+    <!-- libs  styles -->
+    <link rel="stylesheet" href="css/libs.min.css"/>
+    <!-- custom styles -->
+    <link rel="stylesheet" href="css/main.css"/>
+    
+</head>
+
+<body ng-controller="FeedList">
+
+    <header>
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle sidebar-btn" data-toggle="offcanvas" data-target="#sidebar" data-canvas="body">
+                        <span class="glyphicon glyphicon-align-left"></span>
+                    </button>
+                    <div class="logo-wrap">
+                        <a class="navbar-brand rss" style="cursor: pointer"><span class="orange">RSS</span><span class="line">|</span>READER</a>
+                    </div>
+                    <button type="button" class="navbar-toggle profile-detail-btn" data-toggle="collapse" data-target=".profile-detail">
+                        <span class="glyphicon glyphicon-align-justify"></span>
+                    </button>
+                </div><!-- .navbar-header -->
+    
+                <div class="hidden-xs">
+                    <div class="nav navbar-nav navbar-right">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="https://lh6.googleusercontent.com/-y-3TDdciheg/AAAAAAAAAAI/AAAAAAAAAiI/eYG9xrUM36Y/photo.jpg?sz=200" class="user-image" alt="User Image">
+                                <span>pacikav@gmail.com</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="user-photo">
+                                    <img src="https://lh6.googleusercontent.com/-y-3TDdciheg/AAAAAAAAAAI/AAAAAAAAAiI/eYG9xrUM36Y/photo.jpg?sz=200" class="img-circle" alt="User Image">
+                                </li>
+                                <li class="user-btns">
+                                    <div class="pull-left">
+                                        <a href="profile.html" class="btn btn-primary">Profile</a>
+                                    </div>
+                                    <div class="pull-right">
+                                        <button class="btn btn-primary" id="sign_out">Sign out</button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- desktop menu -->
+                
+                <div class="row visible-xs">
+                    <div class="profile-detail navbar-collapse collapse">
+                        <ul>
+                            <li class="user-photo">
+                                <img src="https://lh6.googleusercontent.com/-y-3TDdciheg/AAAAAAAAAAI/AAAAAAAAAiI/eYG9xrUM36Y/photo.jpg?sz=200" alt="User Image">
+                            </li>
+                            <li class="user-email">
+                                <span>pacikav@gmail.com</span>
+                            </li>
+                            <li class="user-btns">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="text-center">
+                                            <a href="profile.html" class="btn btn-primary">Profile</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="text-center">
+                                            <button class="btn btn-primary">Sign out</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!-- mobile-menu -->
+                
+                <div id="sidebar" class="navmenu navmenu-fixed-left offcanvas-xs" role="navigation">
+                    <div class="sidebar-nav navbar-collapse">
+                        <ul class="nav" id="side-menu">
+                            <li><a href="#">All</a></li>
+                            <li class="favorites">
+                                <a href="#"><span class="glyphicon glyphicon-star"></span> Favorites<span class="glyphicon glyphicon-chevron-right"></span></a>
+                                <ul class="nav nav-second-level collapse">
+                                    <li class="active">
+                                        <a href="#">Flot Charts</a>
+                                    </li>
+                                </ul>
+                                <!-- /.nav-second-level -->
+                            </li>
+                            <li class="active">
+                                <a href="#">News<span class="glyphicon glyphicon-chevron-right"></span></a>
+                                <ul class="nav nav-second-level collapse">
+                                    <li class="active">
+                                        <a href="#">Flot Charts</a>
+                                    </li>
+                                </ul>
+                                <!-- /.nav-second-level -->
+                            </li>
+                            <li>
+                                <a href="#">Custom<span class="glyphicon glyphicon-chevron-right"></span></a>
+                                <ul class="nav nav-second-level collapse">
+                                    <li>
+                                        <a href="#">Panels and Wells</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Buttons</a>
+                                    </li>
+                                </ul>
+                                <!-- /.nav-second-level -->
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-primary" type="button">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add feed
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <div class="feeds-wrap">
+                <div class="feeds-navigation">
+                {{title}}
+                    <h2>Title page</h2>
+                    <div class="btn-group">
+                        <a ui-sref="view-list" type="button" class="btn btn-default active">
+                            <span class="glyphicon glyphicon-list"></span>
+                        </a>
+                        <a ui-sref="view-card" type="button" class="btn btn-default">
+                            <span class="glyphicon glyphicon-th-list"></span>
+                        </a>
+                        <a ui-sref="view-grid" type="button" class="btn btn-default">
+                            <span class="glyphicon glyphicon-th-large"></span>
+                        </a>
+                    </div>
+                    <div class="sort-list dropdown">
+                        <a class="btn btn-default" data-toggle="dropdown" href="#">Newest</a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                            <li><a href="#">Newest</a></li>
+                            <li><a href="#">Oldest</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pull-right col-sm-2 col-lg-1 text-center">
+                        <button type="button" class="btn btn-trash"><span class="glyphicon glyphicon-trash"></span></button>
+                    </div>
+                </div>
+                <div id="feeds" class="list">                   
+                    <!--ng-view></ng-view-->
+                    <ui-view></ui-view>
+                </div>
+            </div><!-- .feed-content -->
+        </div><!-- .container-fluid -->
+    </div><!-- #page-wrapper -->
+    
+    <footer>
+        &copy; 2016
+    </footer>
+
+<script src="js/libs.min.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

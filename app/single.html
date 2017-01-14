@@ -1,0 +1,43 @@
+<div class="single-page" class="row">
+    <div class="col-md-9 article favorite">
+        <div class="single-item">
+            <h1 class="text-center">{{single.title}}</h1>
+            <div class="item-thumb text-center">
+                <img src="img/img1.jpg" alt=""/>
+            </div>
+            <div class="item-excerpt">
+                <div ng-bind-html="single.content | renderHTMLCorrectly"></div>
+            </div>
+            <div class="item-footer">
+                <div class="share-box pull-left">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-trash"></span>
+                    <span class="glyphicon glyphicon-share"></span>
+                </div>
+                <a href="{{single.link}}" target="_blank" class="btn btn-info">Read more</a>
+                <div class="date pull-right">12/11/16</div>
+            </div>
+        </div>
+    </div><!-- .article -->
+    <div class="col-md-3 similar-posts">
+        <h3>Similar Posts</h3>
+        <div class="row">
+            <div class="col-xs-6 col-md-12">
+                <div class="similar-item">
+                    <h4><a href="#">Page title</a></h4>
+                    <div class="item-thumb text-center">
+                        <img src="img/img1.jpg" alt=""/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-12">
+                <div class="similar-item">
+                    <h4><a href="#">Page title</a></h4>
+                    <div class="item-thumb text-center">
+                        <img src="img/img1.jpg" alt=""/>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div><!--.similar-posts -->
+</div><!--row-->

@@ -1,0 +1,24 @@
+<div class="feeds-wrap">
+    <div ui-view="feed-controls"></div>
+    <div id="feeds" class="cards">
+        <div class="feed-item favorite" ng-repeat="item in news | orderBy:date">
+            <div class="item-thumb">
+                <img src="{{item.content | regex}}"/>
+            </div>
+            <div class="item-content">  
+                <p class="title">{{item.title}}</p>
+                <p class="date">{{item.publishedDate | parseDate | date:"dd/MM/yyyy" }}</p>
+                <div class="text-over">
+                    {{item.contentSnippet}}
+                </div>
+                <div class="share-box">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-trash"></span>
+                    <span class="glyphicon glyphicon-share"></span>
+                    <a ui-sref="singleView({cat:category, entry:$index })" class="btn btn-info">Read more</a>
+                </div>
+            </div><!--item-content-->
+        </div><!--feed-item-->
+    </div><!--feeds-->
+</div><!--feeds-wrap-->
+                

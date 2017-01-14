@@ -1,0 +1,34 @@
+<!-- Sidebar starts -->
+<div class="sidebar-nav navbar-collapse">
+    <ul class="nav" id="side-menu">
+        <!--li><a href="#">All</a></li>
+        <li class="favorites">
+            <span class="collapsed up-title" data-toggle="collapse" data-target="#favorites">
+                <span class="glyphicon glyphicon-star"></span> Favorites
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </span>
+            <ul id="favorites" class="nav nav-second-level collapse">
+                <li class="active">
+                    <a href="#">Flot Charts</a>
+                </li>
+            </ul>
+            <!-- /.nav-second-level -->
+        <!--/li-->
+        <li ng-repeat="item in titles">
+            <span class="collapsed up-title" data-toggle="collapse" data-target="#{{item.categoryName}}">{{item.categoryName}}
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </span>
+            <ul id="{{item.categoryName}}" class="nav nav-second-level collapse">
+                <li ng-repeat="feed in item.categoryFeeds">
+                    <a ui-sref="view-list({ cat: feed.feedId })">{{feed.feedTitle}}</a>
+                </li>
+            </ul>
+            <!-- /.nav-second-level -->
+        </li>
+    </ul>     
+    
+</div>                    
+<a ui-sref="dashboard" class="btn btn-primary">
+    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add feed
+</a>
+<!-- Sidebar ends -->

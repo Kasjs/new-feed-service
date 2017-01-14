@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="ReaderApp">
+<head>
+    <title>Feeds</title>
+
+    <meta content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet"/>
+    <link rel="stylesheet" href="fonts/FontAwesome/css/font-awesome.min.css"/>
+    <!-- libs  styles -->
+    <link rel="stylesheet" href="css/libs.min.css"/>
+    <!-- custom styles -->
+    <link rel="stylesheet" href="css/main.css"/>
+
+</head>
+
+<body>
+    <div class="loader" data-loading><img src="img/radio.svg" alt=""></div>
+    <header ng-include=" 'templates/header.html' "></header>
+
+    <div id="page-wrapper">
+
+        <div class="container-fluid">
+
+        <!--Templates container -->
+            <!--ui-view></ui-view-->
+            <div ui-view></div>
+        <!--End of templates container-->
+
+        </div><!-- .container-fluid -->
+
+    </div><!-- #page-wrapper -->
+
+    <footer ng-include=" 'templates/footer.html' "></footer>
+
+<script src="js/libs.min.js"></script>
+<script src="js/router.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/services.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/directives.js"></script>
+</body>
+</html>

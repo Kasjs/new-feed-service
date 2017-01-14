@@ -1,0 +1,25 @@
+<div class="feeds-navigation">                
+    <h2>Title page</h2>
+    <div class="btn-group">
+        <a ui-sref="view-list({cat:category})" ui-sref-active="active" type="button" class="btn btn-default">
+            <span class="glyphicon glyphicon-list"></span>
+        </a>
+        <a ui-sref="view-card({cat:category})" ui-sref-active="active" type="button" class="btn btn-default">
+            <span class="glyphicon glyphicon-th-list"></span>
+        </a>
+        <a ui-sref="view-grid({cat:category})" ui-sref-active="active" type="button" class="btn btn-default">
+            <span class="glyphicon glyphicon-th-large"></span>
+        </a>
+    </div>
+    <div class="sort-list dropdown">
+        <a class="btn btn-default" data-toggle="dropdown" href="#">Newest</a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+            <li><a href="#">Newest</a></li>
+            <li><a href="#">Oldest</a></li>
+        </ul>
+    </div>
+
+    <div class="pull-right col-sm-2 col-lg-1 text-center">
+        <button type="button" class="btn btn-trash" ng-click="removeFeedById()"><span class="glyphicon glyphicon-trash"></span></button>
+    </div>
+</div>
